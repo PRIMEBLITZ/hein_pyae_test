@@ -1,0 +1,987 @@
+/* ==========================================
+   GLOBAL / BASE STYLES
+   ========================================== */
+body {
+    background-color: #000000;
+}
+
+
+/* ==========================================
+   START OF 1ST SECTION: HERO SECTION
+   ========================================== */
+
+/* Outer Section Wrapper */
+.prime-hero {
+    width: 100%;
+    min-height: 90vh; /* 90% viewport height */
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0; /* Flush right border */
+}
+
+/* Flex Container */
+.prime-hero-container {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: stretch;
+    gap: 2.5rem;
+    padding-left: 2.5rem; /* Left padding; right side hits viewport edge */
+}
+
+/* Left Card Container */
+.prime-hero-card {
+    flex: 1;
+    margin: auto 0;
+    max-height: calc(90vh - 3rem);
+    background: #0d0f12;
+    border: 1.5px solid rgba(12, 231, 129, 0.35);
+    border-radius: 24px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    box-shadow: 0 0 30px rgba(12, 231, 129, 0.1);
+}
+
+/* Card Header Row & Pill Badge */
+.prime-hero-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #14171d;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.prime-hero-header-title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.prime-hero-badge {
+    background: #0ce781;
+    color: #000000;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Body Content */
+.prime-hero-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.prime-hero-heading {
+    color: #ffffff;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.prime-hero-description {
+    color: #a0a0a0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Action Container & Button Styles */
+.prime-hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #14171d;
+    padding: 1.25rem;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.prime-hero-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.prime-hero-btn-primary {
+    background-color: #0ce781;
+    color: #000000 !important;
+    border: 1.5px solid #0ce781;
+}
+
+.prime-hero-btn-primary:hover {
+    background-color: #05f077;
+    box-shadow: 0 0 15px rgba(12, 231, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+.prime-hero-btn-secondary {
+    background-color: transparent;
+    color: #ffffff !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.prime-hero-btn-secondary:hover {
+    border-color: #0ce781;
+    color: #0ce781 !important;
+    transform: translateY(-2px);
+}
+
+/* Right Media / Image Column */
+.prime-hero-media {
+    flex: 1;
+    width: 100%;
+    height: 90vh; /* Spans 90vh */
+    border-radius: 0;
+    overflow: hidden;
+    border-left: 1.5px solid rgba(12, 231, 129, 0.35);
+    background: #090a0c;
+    position: relative;
+}
+
+.prime-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* RESPONSIVE DESIGN (HIDE IMAGE ON MOBILE) */
+@media (max-width: 992px) {
+    .prime-hero {
+        min-height: auto;
+        padding: 2rem 1rem; /* Added padding so the hero card breathes on mobile */
+    }
+
+    .prime-hero-container {
+        padding-left: 0;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .prime-hero-card {
+        margin: 0;
+        max-height: none;
+        width: 100%;
+        border-radius: 20px; /* Restored clean rounded borders */
+        padding: 1.75rem 1.25rem;
+    }
+
+    /* Completely hide image container on screens 992px and below */
+    .prime-hero-media {
+        display: none !important;
+    }
+}
+
+/* ==========================================
+   END OF 1ST SECTION: HERO SECTION
+   ========================================== */
+
+
+/* ==========================================
+   START OF 2ND SECTION: COMICS VS SHOW SECTION
+   ========================================== */
+.comparison-preview-section {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: #050505;
+    border-top: 1px solid rgba(12, 231, 129, 0.15);
+}
+
+.comparison-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Header */
+.comparison-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.comparison-badge {
+    background: rgba(12, 231, 129, 0.1);
+    color: #0ce781;
+    border: 1px solid #0ce781;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.85rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.comparison-header h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.comparison-header p {
+    color: #a0a0a0;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Comparison Cards */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.comparison-card {
+    background: #0e0f0e;
+    border: 1px solid rgba(12, 231, 129, 0.2);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.comparison-card:hover {
+    transform: translateY(-4px);
+    border-color: #0ce781;
+}
+
+.comparison-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.75rem;
+}
+
+.comparison-card-header h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.diff-tag {
+    font-size: 0.75rem;
+    color: #ffc107;
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Split Sides Inside Card */
+.comparison-card-body {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.compare-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* PRIME BUTTON SYSTEM */
+.prime-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none !important; /* Removes blue default underline */
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* Green Primary Button */
+.prime-btn-primary {
+    background-color: #0ce781;
+    color: #000000 !important;
+    border: 1px solid #0ce781;
+}
+
+.prime-btn-primary:hover {
+    background-color: #05f077;
+    color: #000000 !important;
+    box-shadow: 0 0 15px rgba(12, 231, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Dark Outline Secondary Button */
+.prime-btn-secondary {
+    background-color: transparent;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.prime-btn-secondary:hover {
+    border-color: #0ce781;
+    color: #0ce781 !important;
+    transform: translateY(-2px);
+}
+
+.side-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.comic-side .side-label {
+    color: #0ce781;
+}
+
+.show-side .side-label {
+    color: #3b82f6;
+}
+
+.compare-side p {
+    color: #b3b3b3;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.compare-divider {
+    font-weight: 900;
+    font-size: 0.8rem;
+    color: #555555;
+    background: #161716;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Footer Link */
+.comparison-footer {
+    text-align: center;
+}
+
+/* Responsive Alignment */
+@media (max-width: 600px) {
+    .comparison-preview-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .comparison-card-body {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .compare-divider {
+        align-self: center;
+        margin: 0.25rem 0;
+    }
+
+    .comparison-header h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* ==========================================
+   END OF 2ND SECTION: COMICS VS SHOW SECTION
+   ========================================== */
+
+
+/* ==========================================
+   START OF 3RD SECTION: VARIANTS GRID SECTION
+   ========================================== */
+.variants-section {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: #000000;
+}
+
+.variants-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Header Formatting */
+.variants-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.variants-badge {
+    background: rgba(12, 231, 129, 0.1);
+    color: #0ce781;
+    border: 1px solid #0ce781;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.variants-header h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.variants-header p {
+    color: #a0a0a0;
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+/* Responsive Grid Layout (Default 5 columns on desktop) */
+.variants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Individual Card Styling */
+.variant-card {
+    background: #111211;
+    border: 1px solid rgba(12, 231, 129, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.variant-card:hover {
+    transform: translateY(-6px);
+    border-color: #0ce781;
+    box-shadow: 0 0 20px rgba(12, 231, 129, 0.3);
+}
+
+/* Image Wrapper with Portrait Ratio */
+.variant-img-box {
+    width: 100%;
+    height: 260px;
+    background: #000000;
+    overflow: hidden;
+}
+
+/* Card Information Area */
+.variant-info {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161716;
+}
+
+.variant-info h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.variant-tag {
+    font-size: 0.75rem;
+    color: #0ce781;
+    background: rgba(12, 231, 129, 0.15);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablet (3 Columns) */
+@media (max-width: 992px) {
+    .variants-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+/* Mobile (2 Columns) */
+@media (max-width: 600px) {
+    .variants-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .variants-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+    }
+
+    .variant-img-box {
+        height: 180px;
+    }
+
+    .variant-info {
+        padding: 0.75rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .variant-info h3 {
+        font-size: 0.85rem;
+    }
+}
+
+/* ==========================================
+   END OF 3RD SECTION: VARIANTS GRID SECTION
+   ========================================== */
+
+
+/* ==========================================
+   START OF 4TH SECTION: ABOUT PRIME SECTION
+   ========================================== */
+.about-prime-section {
+    width: 100%;
+    padding: 3rem 2rem;
+    background-color: #000000;
+}
+
+.about-prime-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #0d0e0d;
+    border: 1px solid rgba(12, 231, 129, 0.25);
+    border-radius: 16px;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+/* LEFT CONTENT SIDE */
+.about-prime-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.about-prime-badge {
+    align-self: flex-start;
+    background: rgba(12, 231, 129, 0.1);
+    color: #0ce781;
+    border: 1px solid #0ce781;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.about-prime-title {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.about-prime-description {
+    color: #b3b3b3;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-prime-description strong {
+    color: #0ce781;
+}
+
+.about-prime-description em {
+    color: #ffffff;
+    font-style: normal;
+}
+
+/* RIGHT LOGO SIDE */
+.about-prime-media {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.about-prime-logo {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+    display: block;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablet & Mobile (Switch to Vertical Layout) */
+@media (max-width: 768px) {
+    .about-prime-card {
+        flex-direction: column-reverse; /* Shows Logo on Top, Text Below on Mobile */
+        padding: 1.75rem;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .about-prime-content {
+        align-items: center;
+    }
+
+    .about-prime-badge {
+        align-self: center;
+    }
+
+    .about-prime-title {
+        font-size: 1.75rem;
+    }
+
+    .about-prime-description {
+        font-size: 0.95rem;
+    }
+
+    .about-prime-logo {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* ==========================================
+   END OF 4TH SECTION: ABOUT PRIME SECTION
+   ========================================== */
+
+
+/* Responsive Container Grid */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1100px;
+  width: 100%;
+  align-items: center;
+}
+
+/* ==========================================
+   2. Absolute Stacking Border Image Solution
+   ========================================== */
+
+/* ==========================================
+   FIXED BORDER OVERLAY & IMAGE STACKING
+   ========================================== */
+
+/* Outer frame container */
+/* Outer wrapper holding the frame assembly */
+/* Container Box */
+/* Container Box (Reduced size) */
+.custom-border-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 260px; /* Reduced from 350px/400px */
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 1. Avatar Image */
+.profile-img {
+  position: absolute;
+  width: 80%;       /* Adjust this % if image corners bleed out of frame */
+  height: 80%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* 2. Border Frame Overlay */
+.border-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ==========================================
+   3. Content Area & Typography
+   ========================================== */
+.content-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.sub-heading {
+  color: #4dff7c; /* Red accent matching the custom frame */
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.content-card h2 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.content-card p {
+  color: #c5a880;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.cta-btn {
+  align-self: flex-start;
+  padding: 12px 30px;
+  background-color: #02e985;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #000000;
+}
+
+/* ==========================================
+   4. Responsive Device Viewport Media Queries
+   ========================================== */
+
+/* Tablets and Desktop monitors (Widths 768px and up) */
+@media (min-width: 768px) {
+  .about-container {
+    grid-template-columns: 45% 55%; /* Smoothly re-aligns to double horizontal columns */
+    gap: 50px;
+  }
+  
+  .content-card {
+    padding: 0;
+  }
+}
+
+/* Wider Desktop setups (Widths 1024px and up) */
+@media (min-width: 1024px) {
+  .content-card h2 {
+    font-size: 3rem;
+  }
+}
+/* ==========================================
+   BOOTSTRAP CAROUSEL NEON OVERRIDES
+   ========================================== */
+
+#variantBootstrapCarousel {
+    padding: 0 3.25rem; /* Space so control arrows don't cover card content */
+}
+
+/* Styled Floating Arrow Buttons */
+.prime-bs-control {
+    width: 42px;
+    height: 42px;
+    background-color: #0ce781;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.prime-bs-control:hover {
+    background-color: #05f077;
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(12, 231, 129, 0.5);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.prime-bs-control.carousel-control-prev {
+    left: -5px;
+}
+
+.prime-bs-control.carousel-control-next {
+    right: -5px;
+}
+
+/* Invert default white SVG arrows to black */
+.prime-bs-control .carousel-control-prev-icon,
+.prime-bs-control .carousel-control-next-icon {
+    filter: invert(1);
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+@media (max-width: 576px) {
+    #variantBootstrapCarousel {
+        padding: 0 1.75rem;
+    }
+}
+
+/* ==========================================
+   ABOUT SECTION CAROUSEL STYLES
+   ========================================== */
+
+/* Frame Overlay Alignment */
+.custom-border-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* 1. Avatar Image - Expand to fill wrapper */
+.profile-img {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* 2. Border Frame Overlay - Scaled up to stretch over image edges */
+.border-overlay {
+  position: absolute;
+  inset: 0;
+  width: 108%;
+  height: 102%;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
+  transform: scale(1.35); /* Adjust scale value if needed */
+}
+
+
+/* Text Content Styling */
+.sub-heading {
+  color: #0ce781;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-btn {
+  background: #0ce781;
+  color: #000;
+  border: none;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #05f077;
+  box-shadow: 0 0 15px rgba(12, 231, 129, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Custom Navigation Buttons */
+.about-ctrl-btn {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(12, 231, 129, 0.2);
+  border: 1px solid #0ce781;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.about-ctrl-btn:hover {
+  background-color: #0ce781;
+  opacity: 1;
+  box-shadow: 0 0 12px rgba(12, 231, 129, 0.6);
+}
+
+.about-ctrl-btn.carousel-control-prev {
+  left: -20px;
+}
+
+.about-ctrl-btn.carousel-control-next {
+  right: -20px;
+}
+
+.about-ctrl-btn .carousel-control-prev-icon,
+.about-ctrl-btn .carousel-control-next-icon {
+  filter: invert(1);
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Slide Indicator Dots */
+.custom-indicators {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.custom-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.custom-indicators .active {
+  width: 28px;
+  border-radius: 10px;
+  background-color: #0ce781;
+}
+
+@media (max-width: 991px) {
+  .about-ctrl-btn {
+    display: none;
+  }
+}

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Blitz | Home</title>
+<!-- ----------------------Link---------------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- -----------------------------------CSS---------------------------- -->
+    <link rel="stylesheet" href="css/nav-sidebar.css">
+    <link rel="stylesheet" href="css/sign-in-up.css">
+    <link rel="stylesheet" href="extra-css/carousel.css">
+    <link rel="stylesheet" href="css/index-layout.css">
+    <link rel="stylesheet" href="extra-css/back-to-top.css">
+    <link rel="stylesheet" href="extra-css/faq.css">
+    <link rel="stylesheet" href="extra-css/feedback.css">
+    <link rel="stylesheet" href="css/footer.css">
+<!-- ---------------------------------------Web Fav Icon--------------------- -->
+    <link rel="shortcut icon" href="img1/logo.png" type="image/x-icon">
+</head>
+
+
+<!-- ------------------------------Start of Main----------------------------------- -->
+
+<body id="top">
+<!-- ------------------------------start of laptop nav bar------------------------------------------- -->
+    <input type="checkbox" id="sidebar-toggle">
+    <label for="sidebar-toggle" class="overlay"></label>
+    <header class="prime-navbar">
+
+        <!-- ----------------------------logo--------------------------------- -->
+        <a href="index.html" class="logo">
+            <img src="img1/logo2.png" alt="Prime Blitz logo" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
+            <span class="brand-name">Prime Blitz</span>
+        </a>
+        <!-- --------------------------end of logo------------------------------ -->
+
+        <!-------------------------------- Desktop Search Bar---------------------------------- -->
+        <form action="#" method="GET" class="search-box desktop-search">
+            <input type="search" placeholder="Search..." name="search" required>
+            <button type="submit" aria-label="Submit Search Query">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <!-- -------------------------------end of desktop search bar-------------------------- -->
+
+        <!-- ----------------------------Desktop Navigation Links ------------------------------>
+        <ul class="desktop-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li class="prime-dropdown">
+                <a> Variants <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="prime-dropdown-content">
+                    <li><a href="#">Bug Eyed Mark</a></li>
+                    <li><a href="#">Bald Mark</a></li>
+                    <li><a href="#">Wolf Cut Mark</a></li>
+                    <li><a href="#">Full Mask Mark</a></li>
+                    <li><a href="#">ALT-19 Mark</a></li>
+                    <li><a href="#">Moustache Mark</a></li>
+                    <li><a href="#">Shiesty Mark</a></li>
+                    <li><a href="#">Omni Mark</a></li>
+                    <li><a href="#">Viltrumite Mark</a></li>
+                    <li><a href="#">Light Blue Mark</a></li>
+                    <li><a href="#">Bulletproff Mark</a></li>
+                    <li><a href="#">Tracksuit Mark</a></li>
+                    <li><a href="#">Prisoner Mark</a></li>
+                    <li><a href="#">No Goggles Mark</a></li>
+                    <li><a href="#">Maskless Mark</a></li>
+                    <li><a href="#">Flaxan Mark</a></li>
+                    <li><a href="#">Mohawk Mark</a></li>
+                    <li><a href="#">Long Hair Mark</a></li>
+                    <li><a href="#">Sinister Mark <i class="fa-solid fa-crown" style="padding-left: 9px;"></i></a></li>
+                    <li><a href="#">Target Mark</a></li>
+                </ul>
+            </li>
+            <li class="prime-dropdown">
+                <a>Catagories <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="prime-dropdown-content">
+                    <li><a href="#">Invincible Edit</a></li>
+                    <li><a href="#">Invincible</a></li>
+                    <li><a href="#">Team Evil Invincible</a></li>
+                    <li><a href="#">Angstrom Levy</a></li>
+                    <li><a href="#">Mark Prime <i class="fa-solid fa-crown" style="padding-left: 9px; text-align: center;"></i></a></li>
+                    <li><a href="#">Disclaimer <i class="fa-solid fa-circle-exclamation" style="padding-left: 9px; text-align: center;"></i></a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Community</a></li>
+        </ul>
+          <!-- -----------------------------------end of desktop navi link---------------------- -->
+
+        <!-- -----------------------Top Right Nav Auth Trigger Icon (Desktop)--------------------- -->
+        <div class="auth-container">
+            <button commandfor="auth-overlay-panel" command="show-popover" class="auth-trigger-btn" title="Log In / Sign Up">
+                <i class="fa-solid fa-circle-user" style="font-size: 2.2rem;"></i>
+            </button>
+        </div>
+        <!-- -------------------------End of Top Right Nav Auth Trigger ------------------------------>
+
+        <!-- ---------------------Hamburger Icon Menu Trigger (Mobile)------------------------ -->
+        <label for="sidebar-toggle" class="open-btn" aria-label="Open Mobile Menu Drawer">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <!-- ----------------------------End of Ham Icon------------------------------------------ -->
+    </header>
+   <!-- --------------------------------end of laptop nav view--------------------------------- -->
+
+
+
+   <!---------------------- -------------Mobile Drawer Sidebar---------------------- -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <label for="sidebar-toggle" class="close-btn" aria-label="Close Mobile Menu Drawer">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <!-- ----------------------Mobile Sign IN | UP ------------------------------ -->
+            <button commandfor="auth-overlay-panel" command="show-popover" class="mobile-auth sidebar-auth-trigger" title="Log In / Sign Up">
+                <i class="fa-solid fa-circle-user" style="font-size: 2.8rem;"></i>
+            </button>
+        </div>
+        
+        <!-- ----------------------------Mobile Search Bar -------------------------->
+        <form action="#" method="GET" class="search-box mobile-search">
+            <input type="search" placeholder="Search website..." name="search" required>
+            <button type="submit" aria-label="Submit Search Query">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <!------------------------------ Mobile Drawer Navigation Links----------------------------- -->
+        <header class="sidebar-nav">
+            <a href="index.html" class="active">Home</a>
+            <details class="mobile-dropdown">
+                <summary>Variants</summary>
+                <div class="mobile-dropdown-content">
+                    <a href="#">Bug Eyed Mark</a>
+                    <a href="#">Bald Mark</a>
+                    <a href="#">Wolf Cut Mark</a>
+                    <a href="#">Full Mask Mark</a>
+                    <a href="#">ALT-19 Mark</a>
+                    <a href="#">Mustache Mark</a>
+                    <a href="#">Shiesty Mark</a>
+                    <a href="#">Omni Mark</a>
+                    <a href="#">Viltrumite Mark</a>
+                    <a href="#">Light Blue Mark</a>
+                    <a href="#">Bulletproof Mark</a>
+                    <a href="#">Tracksuit Mark</a>
+                    <a href="#">Prisoner Mark</a>
+                    <a href="#">No Goggles Mark</a>
+                    <a href="#">Maskless Mark</a>
+                    <a href="#">Flaxan Mark</a>
+                    <a href="#">Mohawk Mark</a>
+                    <a href="#">Long Hair Mark</a>
+                    <a href="#">Sinister Mark <i class="fa-solid fa-crown" style="padding-left: 9px;"></i></a>
+                    <a href="#">Target Mark</a>
+                </div>
+            </details>
+
+            <details class="mobile-dropdown">
+                <summary>Catagories</summary>
+                <div class="mobile-dropdown-content">
+                    <a href="#">Invincible Edit</a>
+                    <a href="#">Invincible</a>
+                    <a href="#">Team Evil Invincible</a>
+                    <a href="#">Angstrom Levy</a>
+                    <a href="#">Mark Prime <i class="fa-solid fa-crown" style="padding-left: 9px; text-align: center; display: inline;"></i></a>
+                    <a href="#">Disclaimer <i class="fa-solid fa-circle-exclamation" style="padding-left: 9px; text-align: center; display: inline;"></i></a>
+                </div>
+            </details>
+
+            <a href="#">Contact</a>
+            <a href="about.html">About</a>
+            <a href="#">Community</a>
+        </header>
+    </aside>
+
+<!-- ---------------------------------------------End of mobile nav aka side bar-------------------------------------- -->
+
+
+<!----------------------------------------- start of sign in up--------------------------------------------------------------- -->
+ 
+    <main id="auth-overlay-panel" popover class="auth-page-wrapper">
+        
+        <button popovertarget="auth-overlay-panel" popovertargetaction="hide" class="modal-close-cross" aria-label="Close Authentication Panel">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Hidden Checkbox for Form Switch Slide Animation Toggle -->
+        <input type="checkbox" id="auth-panel-switcher" class="auth-toggle-trigger">
+        
+        <div class="auth-display-card">
+            
+            <div class="auth-forms-holder">
+                
+                <!-- Registration  Sign Up Form Panel  -->
+                <form action="#" method="get" class="auth-form-column side-signup">
+                    <div class="form-content-wrapper">
+                        <h1 class="auth-heading">Create Account</h1>
+                        <p class="auth-lead">Register an email for Prime-Blitz</p>
+                        
+                        <div class="auth-core-form">
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Full Name</label>
+                                <input type="text" placeholder="Your name" required autocomplete="name">
+                            </div>
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Email Address</label>
+                                <input type="email" placeholder="name@example.com" required autocomplete="email">
+                            </div>
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Password</label>
+                                <input type="password" placeholder="Create strong password" required autocomplete="new-password">
+                            </div>
+                            <button type="submit" class="auth-btn btn-dark">Sign Up</button>
+                        </div>
+                        
+                        <!-- Mobile Responsive Alternative Switch Trigger Link -->
+                        <div class="auth-mobile-switch-notice">
+                            <p>Already have an account? <label for="auth-panel-switcher" class="auth-action-link">Sign In</label></p>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Session Authentication Sign In Form Panel -->
+                <form action="#" method="get" class="auth-form-column side-signin">
+                    <div class="form-content-wrapper">
+                        <h1 class="auth-heading">Welcome Back</h1>
+                        <p class="auth-lead">Sign in to your account to access your workspace portal.</p>
+                        
+                        <div class="auth-core-form">
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Email Address</label>
+                                <input type="email" placeholder="name@example.com" required autocomplete="email">
+                            </div>
+                            <div class="auth-input-row">
+                                <div class="auth-label-split">
+                                    <label class="auth-field-label">Password</label>
+                                    <a href="#" class="auth-inline-link">Forgot password?</a>
+                                </div>
+                                <input type="password" placeholder="Enter your password" required autocomplete="current-password">
+                            </div>
+                            <button type="submit" class="auth-btn btn-blue">Sign In</button>
+                        </div>
+                        
+                        <!-- Mobile Responsive Alternative Switch Trigger Link -->
+                        <div class="auth-mobile-switch-notice">
+                            <p>Don't have an account? <label for="auth-panel-switcher" class="auth-action-link">Sign Up</label></p>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <!-- Sliding Desktop Interactive Visual Curtain Panel Layer -->
+            <div class="auth-overlay-curtain">
+                <div class="auth-curtain-inner">
+                    
+                    <!-- Left Slide Text Message Area Component -->
+                    <div class="curtain-message curtain-msg-left">
+                        <h2>Prime blitz</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                        <label for="auth-panel-switcher" class="curtain-toggle-btn">Go To Sign Up</label>
+                    </div>
+
+                    <!-- Right Slide Text Message Area Component -->
+                    <div class="curtain-message curtain-msg-right">
+                        <h2>prime blitz</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                        <label for="auth-panel-switcher" class="curtain-toggle-btn">Go To Sign In</label>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+<!-------------------------------------- end of sign in sig up---------------------------------------------------- -->
+
+    <!-- start body here -->
+     <!--||||||||||||||||||||||||||||| back to top button|||||||||||||||||||||||| -->
+<a href="#top" class="back-to-top">↑</a> 
+
+
+<!------------------------------------ TICKER BANNER SECTION ------------------------------------------->
+<div class="ticker-wrapper">
+    <div class="ticker-label">
+        <i class="fa-solid fa-fire"></i>
+        <span>TRENDING</span>
+    </div>
+    <div class="ticker-track-container">
+        <div class="ticker-track">
+            <!-- First Loop Group -->
+            <div class="ticker-group">
+                <a href="#" class="ticker-item"><img src="variant/sinister.jpg" alt="Sinister"> Sinister Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/mohawk.jpg" alt="Mohawk"> Mohawk Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/viltrum.jpg" alt="Viltrumite"> Viltrumite Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/sinister.jpg" alt="Sinister"> Sinister Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/mohawk.jpg" alt="Mohawk"> Mohawk Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/viltrum.jpg" alt="Viltrumite"> Viltrumite Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/sinister.jpg" alt="Sinister"> Sinister Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/mohawk.jpg" alt="Mohawk"> Mohawk Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/viltrum.jpg" alt="Viltrumite"> Viltrumite Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/sinister.jpg" alt="Sinister"> Sinister Mark</a>
+            </div>
+            <!-- Duplicate Group for Seamless Infinite Scroll -->
+            <div class="ticker-group">
+                <a href="#" class="ticker-item"><img src="variant/viltrum.jpg" alt="Viltrumite"> Viltrumite Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/sinister.jpg" alt="Sinister"> Sinister Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/mohawk.jpg" alt="Mohawk"> Mohawk Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/viltrum.jpg" alt="Viltrumite"> Viltrumite Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/sinister.jpg" alt="Sinister"> Sinister Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/mohawk.jpg" alt="Mohawk"> Mohawk Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/viltrum.jpg" alt="Viltrumite"> Viltrumite Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/sinister.jpg" alt="Sinister"> Sinister Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/mohawk.jpg" alt="Mohawk"> Mohawk Mark</a>
+                <a href="#" class="ticker-item"><img src="variant/viltrum.jpg" alt="Viltrumite"> Viltrumite Mark</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------------------------------------------End of auto small carousel------------------------------------>
+
+<!-- ------------------------------Start of Hero------------------------------------------------------ -->
+<section class="prime-hero">
+    <div class="prime-hero-container">
+        
+        <!-- Left Side: Content Card -->
+        <div class="prime-hero-card">
+            
+            <!-- Top Header & Pill Badge Row -->
+            <div class="prime-hero-header-row">
+                <h2 class="prime-hero-header-title">Hein Pyae Kyaw</h2>
+                <span class="prime-hero-badge">Thiha edition</span>
+            </div>
+
+            <!-- Main Text Content -->
+            <div class="prime-hero-body">
+                <h1 class="prime-hero-heading">Explore variants</h1>
+                <p class="prime-hero-description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim sapiente at iusto officia consequatur temporibus repudiandae deserunt recusandae incidunt, vitae nihil corporis sit, repellendus fuga perspiciatis repellat, a impedit! Numquam?
+                </p>
+            </div>
+
+            <!-- Stacked / Flex Action Buttons (<a> tags) -->
+            <div class="prime-hero-actions">
+                <a href="#variants" class="prime-hero-btn prime-hero-btn-primary">
+                    <i class="fa-solid fa-compass"></i> Explore Variants
+                </a>
+                <a href="#comparison" class="prime-hero-btn prime-hero-btn-secondary">
+                    <i class="fa-solid fa-layer-group"></i> View Comparisons
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Right Side: Image Display -->
+        <div class="prime-hero-media">
+            <img src="img1/duo-logo.webp" alt="Prime Blitz Variant Showcase" class="prime-hero-img">
+        </div>
+
+    </div>
+</section>
+<!-- -----------------------------------------End of hero--------------------------------------------- -->
+
+<!-- ------------------------------------------start of 2nd sec----------------------------------------- -->
+<section class="comparison-preview-section">
+    <div class="comparison-container">
+        
+        <!-- Section Header -->
+        <div class="comparison-header">
+            <span class="comparison-badge">sdfsas</span>
+            <h2>dsfsdasdfs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident!</p>
+        </div>
+
+        <!-- Comparison Cards Grid -->
+        <div class="comparison-grid">
+            
+            <!-- Card 1 -->
+            <div class="comparison-card">
+                <div class="comparison-card-header">
+                    <h3>Sinister Mark</h3>
+                    <span class="diff-tag">sdasfsadfs</span>
+                </div>
+                <div class="comparison-card-body">
+                    <div class="compare-side comic-side">
+                        <span class="side-label">sadfss</span>
+                        <p>Brutal, tactical armor design with distinct comic-style cape accents during the Invincible War.</p>
+                    </div>
+                    <div class="compare-divider">asf</div>
+                    <div class="compare-side show-side">
+                        <span class="side-label">sadf</span>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="comparison-card">
+                <div class="comparison-card-header">
+                    <h3>sdfassds</h3>
+                    <span class="diff-tag">asdfsadfsfsa</span>
+                </div>
+                <div class="comparison-card-body">
+                    <div class="compare-side comic-side">
+                        <span class="side-label">sdf</span>
+                        <p>Introduced strictly as a menacing force during Angstrom Levy’s multiverse assault.</p>
+                    </div>
+                    <div class="compare-divider">asd</div>
+                    <div class="compare-side show-side">
+                        <span class="side-label">sdaa</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Link to Full Page -->
+        <div class="comparison-footer">
+            <a href="comics-vs-show.html" class="prime-btn prime-btn-primary">Explore Full Comparison Hub →</a>
+        </div>
+
+    </div>
+</section>
+<!-- ----------------------------------------------end of 2nd sec--------------------------------------------------- -->
+
+<!-- ----------------------------------------------Start of 3rd sec aka big carosuel------------------------------------------------- -->
+<div id="primeHeroCarousel" class="carousel slide prime-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+    <h1 style="color: white; text-align: center;">Top 3 My favourite invincible variants</h1>
+    <div class="carousel-inner">
+        
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="prime-carousel-slide">
+                <div class="prime-carousel-media">
+                    <img src="variant/sinister.jpg" alt="Sinister Mark">
+                </div>
+                <div class="prime-carousel-caption-split">
+                    <span class="prime-badge">#1</span>
+                    <h3>Sinister Mark</h3>
+                    <p>The most ruthless variant from the Invincible War multiverse invasion.</p>
+                    <div class="prime-carousel-actions">
+                        <a href="#sinister" class="prime-btn prime-btn-primary">View Lore</a>
+                        <a href="#vault" class="prime-btn prime-btn-secondary">Watch Edits</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="prime-carousel-slide">
+                <div class="prime-carousel-media">
+                    <img src="variant/mohawk.jpg" alt="Mohawk Mark">
+                </div>
+                <div class="prime-carousel-caption-split">
+                    <span class="prime-badge">#2</span>
+                    <h3>Mohawk Mark</h3>
+                    <p>Conquered his entire dimension alongside his universe's Viltrum empire.</p>
+                    <div class="prime-carousel-actions">
+                        <a href="#mohawk" class="prime-btn prime-btn-primary">View Lore</a>
+                        <a href="#vault" class="prime-btn prime-btn-secondary">Watch Edits</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <div class="prime-carousel-slide">
+                <div class="prime-carousel-media">
+                    <img src="variant/viltrum.jpg" alt="Viltrumite Mark">
+                </div>
+                <div class="prime-carousel-caption-split">
+                    <span class="prime-badge">#3</span>
+                    <h3>Viltrumite Mark</h3>
+                    <p>Wears the full royal suit of the Viltrum Empire across dimensions.</p>
+                    <div class="prime-carousel-actions">
+                        <a href="#viltrumite" class="prime-btn prime-btn-primary">View Lore</a>
+                        <a href="#vault" class="prime-btn prime-btn-secondary">Watch Edits</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Arrow Navigation Controls -->
+    <button class="carousel-control-prev prime-carousel-btn" type="button" data-bs-target="#primeHeroCarousel" data-bs-slide="prev" aria-label="Previous slide">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous slide</span>
+    </button>
+    <button class="carousel-control-next prime-carousel-btn" type="button" data-bs-target="#primeHeroCarousel" data-bs-slide="next" aria-label="Next slide">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next slide</span>
+    </button>
+</div>
+<!-- ----------------------------------------------------end of big carousel aka 3rd sec---------------------------------------------- -->
+
+<!-- ---------------------------------------------------start of 4rd sec --------------------------------------------------------------- -->
+<section class="variants-section">
+    <div class="variants-container">
+        
+        <div class="variants-header">
+            <span class="variants-badge">Multiverse Hub</span>
+            <h2>Explore All 20 Invincible Variants</h2>
+            <p>Select any character card to dive into deep-dive lore, comic origins, and power rankings.</p>
+        </div>
+
+        <div class="variants-grid">
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+            <a href="#" class="variant-card">
+                <div class="variant-info"><h3>Target Mark</h3><span class="variant-tag">Variant</span></div>
+            </a>
+        </div>
+
+    </div>
+</section>
+<!-- ------------------------------------------------------------end of 4rd sec------------------------------------------------- -->
+
+<!-- ----------------------------------------------start of abt sec----------------------------------------------------------- -->
+<section class="about-prime-section">
+    <div class="about-prime-card">
+        
+        <!-- Left Side: Text Content -->
+        <div class="about-prime-content">
+            <span class="about-prime-badge">Overview</span>
+            <h2 class="about-prime-title">What is Prime Blitz?</h2>
+            <p class="about-prime-description">
+                <strong>Prime Blitz</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, fugit et perspiciatis nulla doloribus, totam odit soluta, sed eius rem voluptas harum. Minus eos eum dolor, unde quaerat doloribus tenetur.
+            </p>
+        </div>
+
+        <!-- Right Side: Logo Display -->
+        <div class="about-prime-media">
+            <img src="img1/logo2.png" alt="Prime Blitz Logo" class="about-prime-logo">
+        </div>
+
+    </div>
+</section>
+<!-- ------------------------------------------end of abt sec------------------------------------------------------------ -->
+
+<!-- ---------------------------------------start of faq------------------------------------------------------ -->
+<section class="content-section faq-section" id="section-5">
+    <div class="faq-wrapper">
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">Got questions? We've got answers. Explore our core FAQs below.</p>
+        
+        <div class="faq-accordion">
+            <details class="faq-item">
+                <summary>wjsdfjsdkaf asfsdsdafsdfs</summary>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </details>
+            <details class="faq-item">
+                <summary>wjsdfjsdkaf asfsdsdafsdfs</summary>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </details>
+            <details class="faq-item">
+                <summary>wjsdfjsdkaf asfsdsdafsdfs</summary>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </details>
+            <details class="faq-item">
+                <summary>wjsdfjsdkaf asfsdsdafsdfs</summary>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </details>
+        </div>
+    </div>
+</section>
+<!-- ----------------------------------------------------------------end of faq---------------------------------------------- -->
+
+<!-- ----------------------------------------------------start of feedback------------------------------------------------- -->
+
+<section class="content-section feedback-input-section" id="section-feedback">
+    <div class="feedback-container">
+        <h2>We Value Your Feedback</h2>
+        <p class="section-subtitle">Let us know how we can improve your experience with Prime Blitz.</p>
+        
+        <form action="#" method="POST" class="pure-feedback-form">
+            <div class="form-group">
+                <label for="feedbackName">Your Name</label>
+                <input type="text" id="feedbackName" placeholder="Enter your name" required autocomplete="name">
+            </div>
+            
+            <div class="form-group">
+                <label for="feedbackEmail">Email Address</label>
+                <input type="email" id="feedbackEmail" placeholder="name@example.com" required autocomplete="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="feedbackRating">Rating</label>
+                <select id="feedbackRating" required>
+                    <option value="" disabled selected>Select a rating</option>
+                    <option value="5">★★★★★ (5/5)</option>
+                    <option value="4">★★★★☆ (4/5)</option>
+                    <option value="3">★★★☆☆ (3/5)</option>
+                    <option value="2">★★☆☆☆ (2/5)</option>
+                    <option value="1">★☆☆☆☆ (1/5)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="feedbackMessage">Your Message</label>
+                <textarea id="feedbackMessage" rows="5" placeholder="Share your thoughts, suggestions, or report issues..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit-feedback">Send Feedback</button>
+        </form>
+    </div>
+</section>
+<!-- ============================abt border test============================== -->
+
+<!-- START OF ABOUT CAROUSEL SECTION -->
+<section class="about-section py-5 position-relative">
+  <div class="container">
+    
+    <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      
+      <!-- Slide Indicators (Dots at bottom) -->
+      <div class="carousel-indicators custom-indicators mb-0">
+        <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Slide Wrapper -->
+      <div class="carousel-inner">
+        
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row align-items-center g-4">
+            <!-- Profile Frame Column -->
+            <div class="col-lg-5 text-center">
+              <div class="custom-border-wrap">
+           <img src="variant/sinister.jpg" alt="Profile Avatar" class="profile-img">
+                <img src="img1/prime-border.webp" alt="Border Frame" class="border-overlay">
+              </div>
+            </div>
+            <!-- Text Content Column -->
+            <div class="col-lg-7">
+              <div class="content-card ps-lg-4">
+                <span class="sub-heading">idk</span>
+                <h2 class="text-white fw-bold display-6 my-2">Sinister Mark</h2>
+                <p class="text-secondary lead fs-6">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem culpa, aspernatur repellendus eveniet unde aut alias distinctio corrupti!
+                </p>
+                <button class="cta-btn mt-2">Explore</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row align-items-center g-4">
+            <!-- Profile Frame Column -->
+            <div class="col-lg-5 text-center">
+              <div class="custom-border-wrap">
+       <img src="variant/sinister.jpg" alt="Profile Avatar" class="profile-img">
+                <img src="img1/prime-border.webp" alt="Border Frame" class="border-overlay">
+              </div>
+            </div>
+            <!-- Text Content Column -->
+            <div class="col-lg-7">
+              <div class="content-card ps-lg-4">
+                <span class="sub-heading">idk</span>
+                <h2 class="text-white fw-bold display-6 my-2">Target Mark</h2>
+                <p class="text-secondary lead fs-6">
+                  Consectetur adipisicing elit. Voluptatem culpa, aspernatur repellendus eveniet unde aut alias distinctio corrupti magnam ad!
+                </p>
+                <button class="cta-btn mt-2">Explore </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="row align-items-center g-4">
+            <!-- Profile Frame Column -->
+            <div class="col-lg-5 text-center">
+              <div class="custom-border-wrap">
+                <img src="variant/sinister.jpg" alt="Profile Avatar" class="profile-img">
+                <img src="img1/prime-border.webp" alt="Border Frame" class="border-overlay">
+              </div>
+            </div>
+            <!-- Text Content Column -->
+            <div class="col-lg-7">
+              <div class="content-card ps-lg-4">
+                <span class="sub-heading">idk</span>
+                <h2 class="text-white fw-bold display-6 my-2">Viltrumite Mark</h2>
+                <p class="text-secondary lead fs-6">
+                  Aspernatur repellendus eveniet unde aut alias distinctio corrupti magnam ad lorem ipsum dolor sit amet.
+                </p>
+                <button class="cta-btn mt-2">Explore</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Navigation Arrows -->
+      <button class="carousel-control-prev about-ctrl-btn" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next about-ctrl-btn" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+
+  </div>
+</section>
+<!-- END OF ABOUT CAROUSEL SECTION -->
+
+
+<!-- END OF BOOTSTRAP MULTI-CARD CAROUSEL -->
+
+
+
+<!-- -------------------end of feed back |  main content  | nav  | ------------------------------------------- -->
+
+<!-- -------------------------------------------------start of footer----------------------------- -->
+<footer class="page-footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <img src="img1/logo2.png" alt="Prime Blitz Logo" class="footer-logo" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, veritatis alias asperiores dicta, provident atque soluta nihil, qui excepturi assumenda iste similique! Cumque laboriosam fuga deleniti facere blanditiis sapiente dicta!</p>
+            <p><strong>Contact</strong>: toet76322@gmail.com</p>
+            <p><strong>Phone</strong> 09 23055331</p>
+            <a href="#top">Back to top</a>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h3>Explore</h3>
+                <a href="">Something</a>
+                <a href="">Something</a>
+                <a href="">Something</a>
+                <a href="">Something</a>
+            </div>
+            <div id="faq">
+                <h3>More</h3>
+                <a href="">Something</a>
+                <a href="">Something</a>
+                <a href="">Something</a>
+                <a href="">Something</a>
+            </div>
+            <div>
+                <h3>Community</h3>
+                <a href="">Something</a>
+                <a href="">Something</a>
+                <a href="">Something</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ----------------------------------------------------------end of footer-------------------------------------- -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

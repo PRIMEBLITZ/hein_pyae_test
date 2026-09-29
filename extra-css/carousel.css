@@ -1,0 +1,194 @@
+/* SIDE-BY-SIDE BOOTSTRAP CAROUSEL */
+.prime-carousel {
+    width: 100%;
+    max-width: 1100px;
+    margin: 3rem auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid #0ce781;
+    background: #0d0f12;
+    box-shadow: 0 0 25px rgba(12, 231, 129, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+/* Slide Container Flexbox Split */
+.prime-carousel-slide {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    min-height: 480px;
+    padding: 2.5rem;
+    gap: 3rem;
+}
+
+/* Left Side: Image Container */
+.prime-carousel-media {
+    flex: 0 0 320px; /* Fixed width for portrait image */
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #0ce781;
+}
+
+.prime-carousel-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center; /* Keeps character faces visible */
+}
+
+/* Right Side: Text & Actions Overrides */
+.prime-carousel-caption-split {
+    position: static !important; /* Removes Bootstrap absolute positioning overlay */
+    padding: 0 !important;
+    text-align: left !important;
+    color: #ffffff;
+    flex: 1;
+}
+
+.prime-badge {
+    display: inline-block;
+    background: rgba(12, 231, 129, 0.15);
+    color: #0ce781;
+    border: 1px solid #0ce781;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.prime-carousel-caption-split h3 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.prime-carousel-caption-split p {
+    color: #b3b3b3;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+}
+
+.prime-carousel-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* RESPONSIVE DESIGN (Tablets & Mobile) */
+@media (max-width: 868px) {
+    .prime-carousel-slide {
+        flex-direction: column; /* Stack vertically on small screens */
+        padding: 1.5rem;
+        gap: 1.5rem;
+        min-height: auto;
+    }
+
+    .prime-carousel-media {
+        flex: none;
+        width: 100%;
+        max-width: 280px;
+        height: 320px;
+    }
+
+    .prime-carousel-caption-split {
+        text-align: center !important;
+    }
+
+    .prime-carousel-caption-split p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .prime-carousel-actions {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.ticker-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #0d0e0d;
+    border-bottom: 1px solid rgba(12, 231, 129, 0.2);
+    height: 48px;
+    width: 100%;
+    margin-top: 72px; /* Clears fixed navbar */
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.ticker-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1.25rem;
+    height: 100%;
+    background-color: #0d0e0d;
+    color: #09f130;
+    font-weight: 800;
+    font-size: 0.85rem;
+    z-index: 20;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.ticker-track-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.ticker-track {
+    display: flex;
+    width: max-content;
+    animation: infiniteTicker 20s linear infinite;
+}
+
+.ticker-track:hover {
+    animation-play-state: paused;
+}
+
+.ticker-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 2rem;
+}
+
+.ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.ticker-item:hover {
+    color: #0ce781;
+}
+
+.ticker-item img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #0ce781;
+    flex-shrink: 0;
+}
+
+@keyframes infiniteTicker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
